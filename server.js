@@ -39,7 +39,8 @@ app.get('/find/:key',function(req,res){
 	var key = req.params.key;
 	Url.findOne({id:key},function (err, code) 
 	{
-	    if (err) return console.error("eError");
+        if (err) return console.error("eError");
+        console.log('code');
         res.send(code);
     });
 });

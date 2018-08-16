@@ -39,7 +39,7 @@ class Course extends Component
             .catch(err => console.log(err));
     };
     callApi = async () => {
-        const a = "/url/2";
+        const a = "/find/2";
         const response = await fetch(a);
         const body = await response.json();
         if (response.status !== 200) throw Error(body.message);
