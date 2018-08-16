@@ -28,7 +28,23 @@ class Course extends Component
             ],
         };
     }
-
+    componentDidMount()
+    {
+        this.loadCode();
+    }
+    
+    loadCode = () => {
+        this.callApi()
+            .then(res => { console.log(res); console.log('reterived') } )
+            .catch(err => console.log(err));
+    };
+    callApi = async () => {
+        const a = "/url/2";
+        const response = await fetch(a);
+        const body = await response.json();
+        if (response.status !== 200) throw Error(body.message);
+        return body;
+    };
     render()
     {
         function playVideo   ()     {

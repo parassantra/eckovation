@@ -13,7 +13,7 @@ class Navbar extends Component
     {
        
         return(
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 
                 <a className="navbar-brand" href="http://codehala.org/" target="new" data-placement="bottom"  data-toggle="popover" data-trigger="hover" data-content="Drawit is an online code editing platform, currently providing HTML,CSS and JavaScript support.">
                     <span id="brand"> Learn Here</span>

@@ -34,8 +34,15 @@ app.get('*', (req, res) => {
 });
 
 
-  
 //////////////////////////////////RETERIVING SAVED PAGES ///////////////////////////////////
+app.get('/find/:key',function(req,res){
+	var key = req.params.key;
+	Url.findOne({id:key},function (err, code) 
+	{
+	    if (err) return console.error("eError");
+        res.send(code);
+    });
+});
 ////////////////////////////RETERIVING SAVED PAGES END ////////////////////////////////
 
 
