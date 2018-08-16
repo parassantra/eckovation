@@ -26,20 +26,22 @@ class Course extends Component
                 'https://www.youtube.com/embed/haI01OWwFPk',
                 'https://www.youtube.com/embed/1KUQrCjbIZA'
             ],
+            vid : ''
         };
     }
 
+    clicked = (item) =>{
+        console.log(item);
+        // this.setState({vid : item});
+    };
     render()
     {
-        function playVideo   ()     {
-            ReactDOM.render( 
-                <center>
-                    <iframe width="95%" height='768px'
-                        src='https://www.youtube.com/embed/D0GU-A8XNIA'>
-                    </iframe>
-                </center> 
-            , document.getElementById('playArea'));
-        }
+        let vid
+        if(vid == '')
+            vid = <center> <iframe width="95%" height='768px' src='https://www.youtube.com/embed/1KUQrCjbIZA'> </iframe></center> 
+        else
+            vid = <center> <iframe width="95%" height='768px' src={this.state.vid}> </iframe></center> 
+        
         return(
             <div>
                 <nav className='rm-margin'>
@@ -89,9 +91,7 @@ class Course extends Component
                         </div>
                         </div>
                 </div>
-
-                <div id='playArea'>
-                </div>
+                <vid />
                 <div className=' container'>
                 <div className="card" >
                         <div className="card-header">
@@ -100,7 +100,7 @@ class Course extends Component
                         <ul className="list-group list-group-flush">
                         { 
                             this.state.videos.map((item, i) => 
-                            <li className="list-group-item" onClick={playVideo} key={i}> 
+                            <li className="list-group-item" onClick={this.clicked} key={i}> 
                                     Video&nbsp;{i+1}
                                 </li>
                             )
@@ -108,7 +108,6 @@ class Course extends Component
                         </ul>
                         </div>
                 </div>
-                    <a onClick={playVideo}> sdadsasa</a>
             </div>
         );
     }
