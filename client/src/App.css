@@ -1,0 +1,29 @@
+.bg-dark
+{
+    color:white;
+}
+.rm-margin
+{
+    margin-bottom : -15px;
+}
+.card1
+{
+    width: 18rem;
+}
+.cInfo
+{
+    font-size: 18px;
+}
+a:hover 
+{
+    cursor: pointer;
+}
+#author
+{
+    color: grey;
+    font-size: 18px;
+}
+.gold
+{
+    color: goldenrod;
+}
