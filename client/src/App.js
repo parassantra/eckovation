@@ -15,9 +15,8 @@ class App extends Component
                 <Navbar  />
                 <Router>
                     <Switch>
-                        <Route path={"/"} exact component={ Body  } />
                         <Route path={"/Course"} component={ Course } />
-                        <Route path={"/:id"} component={ Body }  />
+                        <Route path={"/:id"} component={ Course }  />
                     </Switch>
                 </Router>  
             </div>
