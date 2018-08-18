@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "client": "cd client && npm install && npm run build && npm run start",
+    "client": "cd client && npm install && npm run build",
     "server": "node server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
